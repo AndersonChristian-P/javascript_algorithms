@@ -9,6 +9,35 @@
 // anagrams('RAIL SAFETY', 'fairy tales') --> True
 // anagrams('Hi there', 'bye there') --> False
 
-const anagrams = (stringA, stringB) => {
 
+// create a helper function that builds a character map
+buildCharMap = str => {
+  const charMap = {}
+
+  for (let char of str.replace(/[^\w]/g, "".toLowerCase)) {
+    if (!charMap[char]) {
+      charMap[char] = 1
+    } else {
+      charMap[char]++
+    }
+  }
+
+  return charMap
 }
+// the regex above says anytime we find a character that isn't a number or a
+// capital case or lower case letter replace it with nothing
+
+
+const anagrams = (stringA, stringB) => {
+  const aCharMap = buildCharMap(stringA)
+  const bCharMap = buildCharMap(stringB)
+
+  if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+    return false
+  }
+
+  return true
+}
+
+// Object.keys() method returns an array of a given object's own enumerable
+// property names, in the same order as we get with a normal loop

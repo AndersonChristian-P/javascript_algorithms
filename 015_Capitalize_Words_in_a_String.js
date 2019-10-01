@@ -15,4 +15,13 @@ const capitalizeWords = str => {
   return words.join(" ")
 }
 
-console.log(capitalizeWords("where did you go")) 
+console.log(capitalizeWords("where did you go"))
+
+// --Logic
+// Make an empty array 'words'
+// Split the input string by spaces to get an array
+// For each word in the array
+  // Uppercase the first letter of the word
+  // Join first letter with the rest of the string
+  // Push result into 'words' array
+// Join 'words' into string and return it

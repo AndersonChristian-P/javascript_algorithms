@@ -26,7 +26,7 @@ const chunk = (array, size) => {
 
 console.log(chunk([1, 2, 3, 4], 2))
 
-
+// --Logic
 // create an empty array called 'chunked
 // for each element in the unchunked array
   // retrieve the last element in chunked

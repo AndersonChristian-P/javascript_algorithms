@@ -28,3 +28,15 @@ const steps = n => {
 }
 
 steps(6)
+
+
+// --Logic
+  // From 0 to n (iterate through rows)
+    // Create an empty string, 'stair'
+    // From 0 to n (iterate through columns)
+      // IF the current column is equal to or less than the current row
+        // Add a '#' to 'stair
+      // ELSE
+        // Add a space to 'stair'
+  // Console log 'stair'
+

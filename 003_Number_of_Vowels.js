@@ -1,4 +1,11 @@
-// find the number of vowels in a string
+// --Directions
+// Write a function that returns the number of vowels used in a string. Vowels are
+// characters 'a', 'e', 'i', 'o', and 'u'.
+
+// --Examples
+// vowels('Hi there') --> 3
+// vowels('why do you ask?') --> 4
+// vowels('Why?') --> 0
 
 const vowels = ['a', 'e', 'i', 'o', 'u']
 

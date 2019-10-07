@@ -16,39 +16,17 @@
 
 const solution = A => {
 
-  // const noDuplicates = [...new Set(A)]
-
-  // const sortedArr = noDuplicates.sort()
-
-  // let numOfNeg = 0
-
-  // for (let i = 0; i < sortedArr.length; i++) {
-  //   if (noDuplicates[i] <= 0) {
-  //     numOfNeg++
-  //   }
-
-  //   if (numOfNeg === sortedArr.length) {
-  //     return 1
-  //   }
-  // }
-
-
-  // for (let i = 1; i < sortedArr.length; i++) {
-  //   if (sortedArr[i] - sortedArr[i - 1] !== 1) {
-  //     return sortedArr[i - 1] + 1
-  //   }
-  // }
-
   const set = new Set(A);
-  let i = 1;
+  let i = 1
 
   console.log(set)
 
   while (set.has(i)) {
-    i++;
+    i++
   }
 
-  return i;
+  return i
+  // by default 'i' equals 1
 }
 
 console.log(solution([5, 3, 7]))

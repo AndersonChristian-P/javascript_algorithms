@@ -80,3 +80,9 @@
 * Sorting? --> O(n*log(n))
 
 * Searching a sorted array? --> O(log(n))
+
+## Space Complexity of an Algorithm
+
+* How much more memory is required by doubling the problem set?
+  * In general you can apply the same rules for runtime complexity
+    * In interviews space complexity is less frequently asked as time complexity, so push your study time towards time complexity

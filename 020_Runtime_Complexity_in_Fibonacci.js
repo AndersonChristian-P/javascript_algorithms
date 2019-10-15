@@ -11,7 +11,7 @@
 //    fib(4) === 3
 
 
-// Iterative Solution
+// ----Iterative Solution----
 const fib = n => {
 
   const result = [0, 1]
@@ -29,12 +29,28 @@ const fib = n => {
 }
 
 // -- Logic
-  // create an array that will hold our series of numbers
-  // return the nth element
+// create an array that will hold our series of numbers
+// return the nth element
 
 // -- Runtime Complexity
 // Cerebral academic approach
-  // For every increase in n we have to calculate one additional number - this will never change - linear runtime
+// For every increase in n we have to calculate one additional number - this will never change - linear runtime
 
 // Shortcut way
-  // We have an iterative for loop that loops over a closed set - chances are we have linear runtime
+// We have an iterative for loop that loops over a closed set - chances are we have linear runtime
+
+//  ----Recursive Solution----
+
+const fib = n => {
+  if (n < 2) {
+    return n
+  }
+
+  return fib(n - 1) + fib(n - 2)
+}
+
+// -- Logic
+// best way to look at this is by using a diagram
+
+// -- Runtime Complexity
+// It's very slow

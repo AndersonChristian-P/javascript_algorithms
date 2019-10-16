@@ -41,7 +41,7 @@ const fib = n => {
 
 //  ----Recursive Solution----
 
-const fib = n => {
+const slowFib = n => {
   if (n < 2) {
     return n
   }
@@ -54,3 +54,32 @@ const fib = n => {
 
 // -- Runtime Complexity
 // It's very slow
+// Exponential time solution - we never want to accept this type of 
+// solution - for every increase in n we are going to get a dramatic 
+// increase in the number of function calls
+
+//  ----Memoization----
+
+const memoize = fn => {
+  const cache = {}
+  return function (...args) {
+    if (cache[args]) {
+      return cache[args]
+    }
+
+    const result = fn.apply(this, args)
+    cache[args] = result
+
+    return result
+  }
+}
+
+const slowFib = n => {
+  if (n < 2) {
+    return n
+  }
+
+  return fib(n - 1) + fib(n - 2)
+}
+
+const fib = memoize(slowFib)

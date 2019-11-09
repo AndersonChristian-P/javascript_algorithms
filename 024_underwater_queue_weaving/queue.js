@@ -13,4 +13,8 @@ class Queue {
     this.data.unshift(record)
   }
 
+  peek() {
+    this.data[this.data.length - 1]
+  }
+
 }

@@ -8,7 +8,7 @@ const fibonacci = number => {
   if (number === 1) {
     return [0, 1]
   } else {
-    var sequence = fibonacci(number - 1)
+    let sequence = fibonacci(number - 1)
 
     sequence.push(sequence[sequence.length - 1] + sequence[sequence.length - 2])
 

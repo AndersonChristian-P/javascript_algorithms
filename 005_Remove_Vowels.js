@@ -1,15 +1,17 @@
 // remove the vowels in a string
 
-const vowels = 'aeiou'
+const vowels = 'aeiouAEIOU'
 
 const removeVowels = str => {
-  const strToArr = str.toLowerCase().split('')
+  const strToArr = str.split('')
 
   const filterArr = strToArr.map(element => {
-    if (vowels.indexOf(strToArr) === -1) {
+    if (vowels.indexOf(element) === -1) {
       return element
     }
   })
 
   return filterArr.join('')
 }
+
+console.log(removeVowels('Christian'));

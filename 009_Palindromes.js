@@ -9,10 +9,14 @@
 // palindrome("abcdefg") === false
 
 
-const palindrome = str => {
-  const reverseStr = str.split("").reverse().join("")
+// const palindrome = str => {
+//   const reverseStr = str.split("").reverse().join("")
 
-  return reverseStr === str
+//   return reverseStr === str
+// }
+
+const palindrome = str => {
+  return str.split("").reverse().join("") === str
 }
 
-console.log(palindrome('tat'))
+console.log(palindrome('dod'));

@@ -1,5 +1,5 @@
 const fizzBuzz = num => {
-  for (let i = 1; i < num + 1; i++) {
+  for (let i = 1; i <= num; i++) {
     if (i % 15 === 0) {
       console.log(`Fizz Buzz`);
     } else if (i % 3 === 0) {
@@ -12,4 +12,4 @@ const fizzBuzz = num => {
   }
 }
 
-fizzBuzz(1);
+fizzBuzz(13);

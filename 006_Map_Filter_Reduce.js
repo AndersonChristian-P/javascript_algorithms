@@ -33,3 +33,22 @@ let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']
 const results = words.filter(element => element.length > 6)
 
 console.log(results) // returns ["exuberant", "destruction", "present"]
+
+
+// ---------
+
+
+const prices = [1, 2, 3, 10, 20, 30];
+
+const mapExample = prices.map(value => value + 1);
+
+const filterExample = prices.filter(value => value < 10);
+
+const reduceExample = prices.reduce((total, current) => {
+  return total += current;
+}, 0);
+
+console.log(prices);
+console.log(mapExample);
+console.log(filterExample);
+console.log(reduceExample);

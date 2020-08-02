@@ -8,17 +8,22 @@ const handleGetCart = async () => {
 
 module.exports = {
   getCart: async (req, res) => {
-    const { cart } = req.session
+    const { cart } = req.session;
     try {
       let returnCart = await cart
       if (returnCart) {
-        res.status(200).send(returnCart)
+        res.status(200).send(returnCart);
       } else {
-        throw new Error(401)
+        throw new Error(401);
       }
     } catch (err) {
-      res.sendStatus(404)
+      res.sendStatus(404);
     }
+  },
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.sendStatus(200);
   }
 }
 

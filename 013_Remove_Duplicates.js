@@ -18,6 +18,7 @@ const removeDuplicates = arr => {
   return arr2
 }
 
+
 // Solution 2 - using .map()
 const jobs = ['Web Developer', 'Marketing Manager', 'Project   Manager', 'Web Developer']
 
@@ -31,7 +32,26 @@ function getUnique(arr) {
 }
 console.log(getUnique(jobs))
 
-// Solution 3 - using ES6 feature set()
+
+// Solution 3 - using .forEach()
+const numbers = [1, 1, 2, 2, 3, 3];
+
+const removeDupes = arr => {
+  const singleValueArr = [];
+
+  let evaluateArr = arr.forEach(value => {
+    if (!singleValueArr.includes(value)) {
+      singleValueArr.push(value);
+    }
+  })
+
+  return singleValueArr;
+}
+
+console.log(removeDupes(numbers));
+
+
+// Solution 4 - using ES6 feature set()
 const arr = [3, 5, 7, 3, 2, 5]
 
 const noDuplicates = [...new Set(arr)]

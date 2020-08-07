@@ -48,6 +48,8 @@ const reduceExample = prices.reduce((total, current) => {
   return total += current;
 }, 0);
 
+// 0 is the initial value that we want to set the accumulator to
+
 console.log(prices);
 console.log(mapExample);
 console.log(filterExample);
